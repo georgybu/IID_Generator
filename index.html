@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  data-ng-app="iid">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IID Generator by Georgy Bunin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+</head>
+<body data-ng-controller="mainCtrl">
+    <div class="container">
+        <h1>IID Generator and validator</h1>
+        <h2>(by Georgy Bunin)</h2>
+        <label for="iid">IID</label>
+        <input type="text" data-ng-model="iid" id="iid" data-ng-change="check()">
+        <button data-ng-click="generate()">Generate</button>
+        <p data-ng-if="checkStatus" class="status valid"> Valid</p>
+        <p data-ng-if="!checkStatus" class="status invalid">Not valid</p>
+    </div>
+    <script src="app.min.js"></script>
+</body>
+</html>
